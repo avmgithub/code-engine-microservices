@@ -30,7 +30,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "semver": "npm install semver",
-    "upgrade": "npm --depth 20 update --save caniuse-lite browserslist"
+    "vis-network": "yarn add vis-network@latest"
   },
   "browserslist": {
     "production": [

@@ -1,17 +1,16 @@
-FROM beetravels/node-base:v1 as ui
+#FROM beetravels/node-base:v1 as ui
+FROM avmdocker/node-base:v3 as ui
 
 WORKDIR /services/ui/frontend
 
 COPY frontend .
 
-RUN yarn semver
-
-RUN yarn upgrade
+RUN yarn vis-network
 
 RUN yarn build
 
 
-FROM beetravels/node-base:v1 as release
+FROM avmdocker/node-base:v3 as release
 
 WORKDIR /services/ui/backend
 

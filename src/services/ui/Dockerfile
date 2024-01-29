@@ -3,12 +3,13 @@ FROM avmdocker/node-base:v3 as ui
 
 WORKDIR /services/ui/frontend
 
+ENV GENERATE_SOURCEMAP=false
+
 COPY frontend .
 
 RUN yarn vis-network
 
 RUN yarn build
-
 
 FROM avmdocker/node-base:v3 as release
 

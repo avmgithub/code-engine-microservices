@@ -4,6 +4,8 @@ WORKDIR /services/ui/frontend
 
 COPY frontend .
 
+RUN yarn upgrade
+
 RUN yarn build
 
 

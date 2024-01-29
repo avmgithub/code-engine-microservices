@@ -6,11 +6,8 @@ ENV GENERATE_SOURCEMAP=false
 
 COPY frontend .
 
-#RUN yarn vis-network
-
 RUN yarn build
 
-#FROM avmdocker/node-base:v3 as release
 FROM beetravels/node-base:v1 as release
 
 WORKDIR /services/ui/backend

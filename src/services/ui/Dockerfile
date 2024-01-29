@@ -2,7 +2,7 @@ FROM beetravels/node-base:v1 as ui
 
 WORKDIR /services/ui/frontend
 
-ENV GENERATE_SOURCEMAP=false
+#ENV GENERATE_SOURCEMAP=false
 
 COPY frontend .
 
